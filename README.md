@@ -40,17 +40,19 @@ By elementary calculus Equ (5) has solution,
 
 ![solution](Img/solving_It.png)
 
-To fit Equ (4) to data, we use non-linear least squares. 
+To fit Equ (4) to data, we use non-linear least squares in `R`, the detail of which is coded in `coronavirus.R`.
 
 
 ### Results
+Fig 1 is today's prediction. 
 ![predict1](plots/daily-prediction-2020-01-29.png)
 
+The rate of infection is dropping gradually, as could be seen in Fig 2.
 ![beta](plots/Beta-history.png)
 
 
 ### Interpretation
-
+Although the number of infected cases continue to rise, the rate of increase has been steadily declining. This is a sign that the lock-down is working.
 
 ### Install
 To install R, press Ctrl+Alt+T to open a terminal
