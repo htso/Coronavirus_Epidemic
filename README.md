@@ -40,13 +40,13 @@ By elementary calculus Equ (5) has solution,
 
 ![solution](Img/solving_It.png)
 
-
-
-
+To fit Equ (4) to data, we use non-linear least squares. 
 
 
 ### Results
+![predict1](plots/daily-prediction-2020-01-29.png)
 
+![beta](plots/Beta-history.png)
 
 
 ### Interpretation
