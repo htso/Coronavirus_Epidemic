@@ -75,7 +75,7 @@ Open a terminal,
 
 
 ### Contact
-To ask questions or report issues, please open an issue on the [issues tracker](https://github.com/htso/Wuhan/issues).
+To ask questions or report issues, please open an issue on the [issues tracker](https://github.com/htso/Coronavirus_Epidemic/issues).
 
 
 References
