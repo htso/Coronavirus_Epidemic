@@ -30,7 +30,7 @@ where ![beta_gamma](Img/beta_gamma.gif) are the parameters of the model, t a dis
 
 We could make a simplifying assumption in the case of Wuhan. Since the population in question is large, the impact of the infection is insignificant relative to the size of the population. In a country of 1.4 billion, the current number of deaths from coronavirus is not even 0.01 percent of the population. Therefore, ![S_near_1](Img/S_near_1.gif), and ![R_near_0](Img/R_near_0.gif). We could drop Equation (1) and (3), and Equ (2) becomes,
 
-![equ2_5](Img/equ4-5.png)
+![equ4_5](Img/equ4-5-prev.png)
 
 where I define,
 
