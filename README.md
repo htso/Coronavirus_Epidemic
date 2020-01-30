@@ -38,7 +38,7 @@ where I define,
 
 By elementary calculus Equ (5) has solution,
 
-![solution](Img/solving_I.png)
+![solution](Img/solving_It.png)
 
 
 
