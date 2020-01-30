@@ -34,11 +34,11 @@ We could make a simplifying assumption in the case of Wuhan. Since the populatio
 
 where I define,
 
-![equ6](Img/equ6.png)
+![equ6](Img/beta.png)
 
-which by elementary calculus yields the solution,
+By elementary calculus Equ (5) has solution,
 
-![solution](Img/solution.gif)
+![solution](Img/solving_I.png)
 
 
 
