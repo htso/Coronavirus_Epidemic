@@ -24,15 +24,17 @@ I use a simplified version of the SIR model, which is a standard formulation of 
 
 The three state variables obey the following coupled non-linear differential equations,
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![equ1](Img/equ1.gif)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![equ2](Img/equ2.gif)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![equ3](Img/equ3.gif)
+![equ1_3](Img/equ1-3.png)
 
 where ![beta_gamma](Img/beta_gamma.gif) are the parameters of the model, t a discrete time index, and the state variables are fraction of the total population so that ![sum_1](Img/sum_to_1.gif).
 
 We could make a simplifying assumption in the case of Wuhan. Since the population in question is large, the impact of the infection is insignificant relative to the size of the population. In a country of 1.4 billion, the current number of deaths from coronavirus is not even 0.01 percent of the population. Therefore, ![S_near_1](Img/S_near_1.gif), and ![R_near_0](Img/R_near_0.gif). We could drop Equation (1) and (3), and Equ (2) becomes,
 
-![equ2_simplf](Img/equ2_simplf.gif)
+![equ2_5](Img/equ2-5.png)
+
+where I define,
+
+![equ6](Img/equ6.png)
 
 which by elementary calculus yields the solution,
 
