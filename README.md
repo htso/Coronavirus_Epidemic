@@ -24,9 +24,9 @@ I use a simplified version of the SIR model, which is a standard formulation of 
 
 The three state variables obey the following coupled non-linear differential equations,
 
-![equ1](Img/equ1.gif)\
-![equ2](Img/equ2.gif)\
-![equ3](Img/equ3.gif)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![equ1](Img/equ1.gif)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![equ2](Img/equ2.gif)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![equ3](Img/equ3.gif)
 
 where ![beta_gamma](Img/beta_gamma.gif) are the parameters of the model, t a discrete time index, and the state variables are fraction of the total population so that ![sum_1](Img/sum_to_1.gif).
 
