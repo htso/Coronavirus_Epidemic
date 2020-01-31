@@ -38,7 +38,7 @@ We could make a simplifying assumption in the case of Wuhan. Since the populatio
 </p>
 
 
-where I define ![beta_def](Img/beta-def.png) <p align="center"> <img src="Img/beta-def.png"> </p>.
+where I define ![beta_def](Img/beta-def.png).
 
 By elementary calculus Equ (4) has solution
 
@@ -46,7 +46,7 @@ By elementary calculus Equ (4) has solution
 <img src="Img/equ5.png">
 </p>
 
-To fit Equ (5) to data, I use non-linear least squares in `R`. For coding details please consult `coronavirus.R`.
+The rest is to fit this exponential function to the daily data. I use non-linear least squares in `R`. For coding details please consult `coronavirus.R`.
 
 
 ### Results
