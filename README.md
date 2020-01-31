@@ -37,6 +37,9 @@ where I define ![beta_def](Img/beta-def.png).
 By elementary calculus Equ (4) has solution
 
 ![solution](Img/equ5.png)
+<p align="center"> 
+<img src="Img/equ5.png">
+</p>
 
 To fit Equ (5) to data, I use non-linear least squares in `R`. For coding details please consult `coronavirus.R`.
 
