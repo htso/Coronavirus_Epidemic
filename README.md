@@ -30,15 +30,15 @@ where ![beta_gamma](Img/beta_gamma.gif) are the parameters of the model, t a dis
 
 We could make a simplifying assumption in the case of Wuhan. Since the population in question is large, the impact of the infection is insignificant relative to the size of the population. In a country of 1.4 billion, the current number of deaths from coronavirus is not even 0.01 percent of the population. Therefore, ![S_near_1](Img/S_near_1.gif), and ![R_near_0](Img/R_near_0.gif). We could drop Equation (1) and (3), and Equ (2) becomes,
 
-![equ4_5](Img/equ4-5-prev.png)
+![equ4](Img/equ4.png)
 
-where I define ![equ6](Img/beta.png).
+where I define ![equ6](Img/beta-def.png).
 
 By elementary calculus Equ (4) has solution
 
 ![solution](Img/solving_It.png)
 
-To fit Equ (4) to data, I use non-linear least squares in `R`. For details please consult `coronavirus.R`.
+To fit Equ (4) to data, I use non-linear least squares in `R`. For coding details please consult `coronavirus.R`.
 
 
 ### Results
@@ -55,7 +55,7 @@ Beta, or the rate of infection is dropping, as could be seen in the left plot be
 Although the number of infected cases continue to rise, the rate of increase has been steadily declining. This is a sign that the lock-down is working.
 
 ### Generate Prediction
-Open `corona_data.csv` with your favorite spreadsheet program, e.g. Excel. Read off the latest statistics from [Wiki](https://en.wikipedia.org/wiki/Timeline_of_the_2019%E2%80%9320_Wuhan_coronavirus_outbreak) and enter them in last row.
+Open `corona_data.csv` with your favorite spreadsheet, e.g. Excel. Read off the latest statistics from [Wiki](https://en.wikipedia.org/wiki/Timeline_of_the_2019%E2%80%9320_Wuhan_coronavirus_outbreak) and enter them in last row.
 
 Open a terminal, 
 
