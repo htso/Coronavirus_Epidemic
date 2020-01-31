@@ -26,19 +26,19 @@ The three state variables obey the following coupled non-linear differential equ
 
 ![equ1_3](Img/equ1-3.png)
 
-where ![beta_gamma](Img/beta_gamma.gif) are the parameters of the model, t a discrete time index, and the state variables are fraction of the total population so that ![sum_1](Img/sum_to_1.gif).
+where ![beta_gamma](Img/eta_gamma.png) are the parameters of the model, t a discrete time index, and the state variables are fraction of the total population so that ![sum_1](Img/sum_to_1.gif).
 
-We could make a simplifying assumption in the case of Wuhan. Since the population in question is large, the impact of the infection is insignificant relative to the size of the population. In a country of 1.4 billion, the current number of deaths from coronavirus is not even 0.01 percent of the population. Therefore, ![S_near_1](Img/S_near_1.gif), and ![R_near_0](Img/R_near_0.gif). We could drop Equation (1) and (3), and Equ (2) becomes,
+We could make a simplifying assumption in the case of Wuhan. Since the population in question is large, the impact of the infection is insignificant relative to the size of the population. In a country of 1.4 billion, the current number of deaths from coronavirus is not even 0.01 percent of the population. Therefore, ![S_near_1](Img/S_near_1.png), and ![R_near_0](Img/R_near_0.png). We could drop Equation (1) and (3), and Equ (2) becomes,
 
 ![equ4](Img/equ4.png)
 
-where I define ![equ6](Img/beta-def.png).
+where I define ![beta_def](Img/beta-def.png).
 
 By elementary calculus Equ (4) has solution
 
-![solution](Img/solving_It.png)
+![solution](Img/equ5.png)
 
-To fit Equ (4) to data, I use non-linear least squares in `R`. For coding details please consult `coronavirus.R`.
+To fit Equ (5) to data, I use non-linear least squares in `R`. For coding details please consult `coronavirus.R`.
 
 
 ### Results
