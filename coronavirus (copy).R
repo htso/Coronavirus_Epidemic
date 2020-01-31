@@ -5,17 +5,14 @@
 today = Sys.Date()
 today.ch = as.character(today)
 
-if ( file.exists("CoronaV.RData") ) load("CoronaV.RData")
-rm(data_path, plot_path, csv_file, dat, model, forecast.df)
-
 home = getwd()
-cat("home : ", home)
 data_path = paste(home,  "/data/", sep="")
 plot_path = paste(home,  "/plots/", sep="")
 
+if ( file.exists("CoronaV.RData") ) load("CoronaV.RData")
+
 csv_file = "corona_data.csv"
 full_path = paste(data_path, csv_file, sep="")
-cat("csv full path : ", full_path)
 
 # override dat with the latest data
 dat = read.csv(full_path, header=TRUE, stringsAsFactors=FALSE)
