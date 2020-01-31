@@ -6,7 +6,7 @@ today = Sys.Date()
 today.ch = as.character(today)
 
 if ( file.exists("CoronaV.RData") ) load("CoronaV.RData")
-rm(data_path, plot_path, csv_file, dat, model, forecast.df)
+rm(data_path, plot_path, csv_file, dat, model, forecast.df, last.t, latest.date)
 
 home = getwd()
 cat("home : ", home)
@@ -84,7 +84,8 @@ hgt = max(df[,"confirmed"])
 text(x=1, y=c(hgt*0.9, hgt*0.8), labels=txt, pos=4, col="red", cex=2)
 dev.off()
 
-file.rename(from=file.path(plot_path, fnm), to=file.path(home, "latest-prediction.png"))
+file.copy(from=full_path, to=home)
+file.rename(from=file.path(home, fnm), to=file.path(home, "latest-prediction.png"))
 
 fnm = paste("Beta-history.png",  sep="")
 full_path = paste(plot_path, fnm, sep="")

@@ -44,11 +44,11 @@ To fit Equ (4) to data, we use non-linear least squares in `R`, the detail of wh
 
 
 ### Results
-This is the latest prediction on the number of confirmed cases. 
+This is the latest model prediction on the number of confirmed cases. The actual figures are usually released at around 16:00 PST. 
 
 ![predict1](latest-prediction.png)
 
-The rate of infection is dropping gradually, as could be seen below.
+Beta, or the rate of infection is dropping, as could be seen in the left plot below.
 
 ![beta](plots/Beta-history.png)
 
