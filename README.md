@@ -32,15 +32,13 @@ We could make a simplifying assumption in the case of Wuhan. Since the populatio
 
 ![equ4_5](Img/equ4-5-prev.png)
 
-where I define,
+where I define ![equ6](Img/beta.png).
 
-![equ6](Img/beta.png)
-
-By elementary calculus Equ (5) has solution,
+By elementary calculus Equ (4) has solution
 
 ![solution](Img/solving_It.png)
 
-To fit Equ (4) to data, we use non-linear least squares in `R`, the detail of which is coded in `coronavirus.R`.
+To fit Equ (4) to data, I use non-linear least squares in `R`. For details please consult `coronavirus.R`.
 
 
 ### Results
@@ -56,7 +54,16 @@ Beta, or the rate of infection is dropping, as could be seen in the left plot be
 ### Interpretation
 Although the number of infected cases continue to rise, the rate of increase has been steadily declining. This is a sign that the lock-down is working.
 
-### Install
+### Generate Prediction
+Open `corona_data.csv` with your favorite spreadsheet program, e.g. Excel. Read off the latest statistics from [Wiki](https://en.wikipedia.org/wiki/Timeline_of_the_2019%E2%80%9320_Wuhan_coronavirus_outbreak) and enter them in last row.
+
+Open a terminal, 
+
+    Rscript coronavirus.R
+
+After the script finishes, two files are generated : `latest-prediction.png` in the top directory, and `Beta-history.png` in subdirectory plots/. 
+
+### Install Software
 To install R, press Ctrl+Alt+T to open a terminal
 
     sudo apt-get update 
@@ -70,10 +77,6 @@ Code has been tested on
 * Ubuntu 18.04 
 
 
-### Usage
-Open a terminal, 
-
-    Rscript coronavirus.R
 
 
 ### Contact
