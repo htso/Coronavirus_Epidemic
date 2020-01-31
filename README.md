@@ -44,11 +44,11 @@ To fit Equ (4) to data, we use non-linear least squares in `R`, the detail of wh
 
 
 ### Results
-Fig 1 is today's prediction. 
+This is the latest prediction on the number of confirmed cases. 
 
 ![predict1](latest-prediction.png)
 
-The rate of infection is dropping gradually, as could be seen in Fig 2.
+The rate of infection is dropping gradually, as could be seen below.
 
 ![beta](plots/Beta-history.png)
 
