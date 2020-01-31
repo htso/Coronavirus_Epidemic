@@ -84,6 +84,8 @@ hgt = max(df[,"confirmed"])
 text(x=1, y=c(hgt*0.9, hgt*0.8), labels=txt, pos=4, col="red", cex=2)
 dev.off()
 
+file.rename(from=file.path(plot_path, fnm), to=file.path(home, "latest-prediction.png"))
+
 fnm = paste("Beta-history.png",  sep="")
 full_path = paste(plot_path, fnm, sep="")
 png(full_path, width=1080, height=480)

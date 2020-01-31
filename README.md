@@ -45,9 +45,11 @@ To fit Equ (4) to data, we use non-linear least squares in `R`, the detail of wh
 
 ### Results
 Fig 1 is today's prediction. 
-![predict1](plots/daily-prediction-2020-01-29.png)
+
+![predict1](latest-prediction.png)
 
 The rate of infection is dropping gradually, as could be seen in Fig 2.
+
 ![beta](plots/Beta-history.png)
 
 
