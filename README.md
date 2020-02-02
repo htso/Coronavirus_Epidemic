@@ -9,7 +9,7 @@ As the number of infected cases and deaths keep rising, a statistical perspectiv
 **_Implications_** : The lock-down in Wuhan and other cities seems to be working. 
 
 
-| date       | actual | predict | delta | delta(%) |
+| Date       | Actual | Predict | Delta | % |
 | -----------|--------|---------|-------|----------|
 | 2020-01-28 | 5,974 |	6,809 |	-835 |	-13.98 |
 | 2020-01-29 |	7,711 |	8,884 |	-1,173 |	-15.21 |
