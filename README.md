@@ -4,9 +4,9 @@ As the number of infected cases and deaths keep rising, a statistical perspectiv
 #### Update (2/1/2020) 
 **_Observation_** : Actual has been consistently lower than model prediction. See Fig X.  
 
-**_What it means_** : Spread of the coronavirus is happening **_slower_** than what an exponential model predicts. 
+**_What it means_** : Spread of the coronavirus is happening at a **_slower_** rate than predicted by an exponential model. 
 
-**_Implications_** : The lock-down in Wuhan and other cities seem to be working in containing the contagion. 
+**_Implications_** : The lock-down in Wuhan and other cities seems to be working. 
 
 It's way too early to predict the peak level and its timing, but things don't look as bleak as before.
 
@@ -24,7 +24,7 @@ I capture the Wiki table and save it in `corona_data.csv`, which could be read i
 
 ### Model
 
-I use a simplified version of the SIR model, which is a standard formulation of disease transmission dynamics[4]. In a SIR model, we track the time progression of three populations, namely, the susceptible, denoted by the variable S, the infective, or the variable I, and the removed, or R. If a person is healthy and has not contracted the epidemic, he/she belongs to class S. A sick person is in I, while the class R includes both the dead and those who have recovered from and thus are immune to the disease.
+I use a simplified version of the SIR model, which is a standard formulation of disease transmission dynamics[4]. In a SIR model, we track the time progression of three populations, namely, the susceptible, denoted by the variable `S`, the infective, by `I`, and the removed, or `R`. If a person is healthy and has not contracted the epidemic, he/she belongs to `S`. A sick person is in `I`, while `R` includes both the dead and those who have recovered from and thus are immune to the disease.
 
 The three state variables obey the following coupled non-linear differential equations,
 
