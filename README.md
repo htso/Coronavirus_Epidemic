@@ -1,10 +1,14 @@
 # Wuhan Coronavirus Epidemic
-As the number of infected cases and deaths keep rising, it's instructive to gain a statistical perspective on the on-going coronavirus epidemic in Wuhan, China. This repo provides the modeling tool to make daily prediction. 
+As the number of infected cases and deaths keep rising, a statistical perspective on the spread of the coronavirus epidemic is needed. This repo presents the modeling tool to make daily prediction. My goal is to make a daily update of the model as new data become available. Epidemiological studies on the 2003 SARS epidemic can be found in [1], [2], and [3]. A discussion of the standard models can be found in [4].
 
-My goal is to make a daily update of the model as new data become available so that the rate of contagion could be assessed. 
+#### Update (Feb 1) 
+*Observation* : Actual has been consistently lower than model prediction. See Fig X.  
 
-Epidemiological studies on the 2003 SARS epidemic can be found in [1], [2], and [3]. A discussion of the standard models can be found in [4].
+*What it means* : The spread of the coronavirus is *_slower_* than what an exponential model would predict. 
 
+*Implications* : The lock-down in Wuhan and other cities seem to be working in containing the contagion. 
+
+It's way too early to predict the peak level and its timing, but things don't look as bleak as before.
 
 ### Data Sources
 The official source of data is from 中华人民共和国国家卫生健康委员会 (National Health Commission of the PRC) or 卫健委.
