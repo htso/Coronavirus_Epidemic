@@ -2,11 +2,21 @@
 As the number of infected cases and deaths keep rising, a statistical perspective on the spread of the coronavirus epidemic is needed. This repo presents the modeling tool to make daily prediction. My goal is to make a daily update of the model as new data become available. Epidemiological studies on the 2003 SARS epidemic can be found in [1], [2], and [3]. A discussion of the standard models can be found in [4].
 
 #### Update (2/1/2020) 
-**_Observation_** : Actual has been consistently lower than model prediction. See Fig X.  
+**_Observation_** : Actual has been consistently lower than model prediction. See table below.  
 
 **_What it means_** : Spread of the coronavirus is happening at a **_slower_** rate than predicted by an exponential model. 
 
 **_Implications_** : The lock-down in Wuhan and other cities seems to be working. 
+
+
+| date       | actual | predict | delta | delta(%) |
+| -----------|--------|---------|-------|----------|
+| 2020-01-28 | 5974 |	6809 |	-835 |	-13.98 |
+| 2020-01-29 |	7711 |	8884 |	-1173 |	-15.21 |
+| 2020-01-30 |	9692 |	11041 |	-1349 |	-13.92 |
+| 2020-01-31 |	11791 |	13415 |	-1624 |	-13.77 |
+| 2020-02-01 |	14380 |	15888 |	-1508 |	-10.49 |
+
 
 It's way too early to predict the peak level and its timing, but things don't look as bleak as before.
 
@@ -15,11 +25,7 @@ The official source of data is from 中华人民共和国国家卫生健康委�
 
 http://www.nhc.gov.cn/xcs/yqtb/list_gzbd.shtml
 
-I use the summary table from [Wiki](https://en.wikipedia.org/wiki/Timeline_of_the_2019%E2%80%9320_Wuhan_coronavirus_outbreak).
-
-A nice visualization can be found [here](https://gisanddata.maps.arcgis.com/apps/opsdashboard/index.html#/bda7594740fd40299423467b48e9ecf6).
-
-I capture the Wiki table and save it in `corona_data.csv`, which could be read into R. 
+I use the summary table from [Wiki](https://en.wikipedia.org/wiki/Timeline_of_the_2019%E2%80%9320_Wuhan_coronavirus_outbreak). A nice visualization can be found [here](https://gisanddata.maps.arcgis.com/apps/opsdashboard/index.html#/bda7594740fd40299423467b48e9ecf6). I capture the Wiki table and save it in `corona_data.csv`, which could be read into R. 
 
 
 ### Model
