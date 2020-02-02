@@ -17,12 +17,9 @@ As the number of infected cases and deaths keep rising, a statistical perspectiv
 | 2020-01-31 |	11,791 |	13,415 |	-1,624 |	-13.77 |
 | 2020-02-01 |	14,380 |	15,888 |	-1,508 |	-10.49 |
 
-
 It's way too early to predict the peak level and its timing, but things don't look as bleak as before.
-
-
-
-
+ 
+--- 
 
 ### Data Sources
 The official source of data is from 中华人民共和国国家卫生健康委员会 (National Health Commission of the PRC) or 卫健委.
@@ -31,6 +28,7 @@ http://www.nhc.gov.cn/xcs/yqtb/list_gzbd.shtml
 
 I use the summary table from [Wiki](https://en.wikipedia.org/wiki/Timeline_of_the_2019%E2%80%9320_Wuhan_coronavirus_outbreak). A nice visualization can be found [here](https://gisanddata.maps.arcgis.com/apps/opsdashboard/index.html#/bda7594740fd40299423467b48e9ecf6). I capture the Wiki table and save it in `corona_data.csv`, which could be read into R. 
 
+---
 
 ### Model
 
@@ -61,6 +59,7 @@ By elementary calculus Equ (4) has solution
 
 The rest is to fit this exponential function to the daily data. I use non-linear least squares in `R`. For coding details please consult `coronavirus.R`.
 
+---
 
 ### Results
 This is the latest model prediction on the number of confirmed cases. The actual figures are usually released at around 16:00 PST. 
@@ -71,9 +70,12 @@ Beta, or the rate of infection is dropping, as could be seen in the left plot be
 
 ![beta](plots/Beta-history.png)
 
+---
 
 ### Interpretation
 Although the number of infected cases continue to rise, the rate of increase has been steadily declining. This is a sign that the lock-down is working.
+
+---
 
 ### Generate Prediction
 Open `corona_data.csv` with your favorite spreadsheet, e.g. Excel. Read off the latest statistics from [Wiki](https://en.wikipedia.org/wiki/Timeline_of_the_2019%E2%80%9320_Wuhan_coronavirus_outbreak) and enter them in last row.
