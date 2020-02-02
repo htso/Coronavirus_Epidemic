@@ -15,34 +15,30 @@ full_path = paste(data_path, csv_file, sep="")
 dat1 = read.csv(full_path, header=TRUE, stringsAsFactors=FALSE)
 dat1[,"date"] = as.Date(dat1[,"date"], format="%Y-%m-%d")
 
-plot()
 
-X11()
-png(full_path)
-plot(dat1[,"date"], dat1[,"predict"], type="b", col="red",
-     xlab="Date", ylab="Number of Infected Cases",
-     main="Coronvirus Cases vs Predictions")
-par(new=TRUE)
-lines(dat1[,"date"], dat1[,"actual"], type="b", col="blue")
+#X11()
 
+fnm = "/actual-vs-predict.png"
+full_path = paste(home, fnm, sep="")
 
-abline(v=last.t, col="grey", lwd=2)
-grid(NA, 10, lwd = 2)
-text(x=last.t, y=100, labels=latest.date, pos=3, col="blue", cex=1)
-txt = c(paste(as.character(forecast.df[1,"date"]), round(forecast.df[1,"confirmed"],0), sep=" : "), 
-        paste(as.character(forecast.df[2,"date"]), round(forecast.df[2,"confirmed"],0), sep=" : "))
-hgt = max(df[,"confirmed"])
-text(x=1, y=c(hgt*0.9, hgt*0.8), labels=txt, pos=4, col="red", cex=2)
+png(full_path, width=680, height=480)
+par(mar = c(5,5,5,5))
+with(dat1, plot(date, delta, type="b", col="black", pch=16, cex=2, xaxt="n",
+                xlab="Date", ylab="Delta", ylim=c(-1700,0)))
+title(main="Fig. 1 Actual Infected Cases minus Model Prediction")
+mtext(text="negative ==> actual less than prediction", side=3, line=1)
+axis(1, dat1$date, format(dat1$date, "%b %d"), cex.axis=1 )
+par(new = T)
+with(dat1, plot(date, delta_pct, type="b", col="red3", pch=1, 
+                axes=F, xlab=NA, ylab=NA, cex=2, ylim=c(-16,0)))
+axis(side = 4)
+mtext(side = 4, line = 3, 'percentage')
+legend("topleft",
+       legend=c("Delta", "percent"),
+       lty=c(1,1), pch=c(16, 1), col=c("black", "red3"))
 dev.off()
 
 
-X11()
-par(mar = c(5,5,2,5))
-with(dat1, plot(date, delta, type="b", col="red3", xlab="Date", ylab="Delta", ylim=c(-500,-1600)))
-par(new = T)
-with(dat1, plot(date, delta_pct, pch=16, axes=F, xlab=NA, ylab=NA, cex=1.2))
-axis(side = 4)
-mtext(side = 4, line = 3, 'Number genes selected')
-legend("topleft",
-       legend=c(expression(-log[10](italic(p))), "N genes"),
-       lty=c(1,0), pch=c(NA, 16), col=c("red3", "black"))
+
+
+

@@ -2,12 +2,13 @@
 As the number of infected cases and deaths keep rising, a statistical perspective on the spread of the coronavirus epidemic is needed. This repo presents the modeling tool to make daily prediction. My goal is to make a daily update of the model as new data become available. Epidemiological studies on the 2003 SARS epidemic can be found in [1], [2], and [3]. A discussion of the standard models can be found in [4].
 
 #### Update (2/1/2020) 
-**_Observation_** : Actual has been consistently lower than model prediction. See table below.  
+**_Observation_** : Actual has been consistently lower than model prediction. See table below and Fig. 1.  
 
 **_What it means_** : Spread of the coronavirus is happening at a **_slower_** rate than predicted by an exponential model. 
 
 **_Implications_** : The lock-down in Wuhan and other cities seems to be working. 
 
+It's way too early to predict the peak level and its timing, but things don't look as bleak as before.
 
 | Date       | Actual | Predict | Delta | % |
 | -----------|--------|---------|-------|----------|
@@ -17,7 +18,10 @@ As the number of infected cases and deaths keep rising, a statistical perspectiv
 | 2020-01-31 |	11,791 |	13,415 |	-1,624 |	-13.77 |
 | 2020-02-01 |	14,380 |	15,888 |	-1,508 |	-10.49 |
 
-It's way too early to predict the peak level and its timing, but things don't look as bleak as before.
+<p align="center"> 
+<img src="actual-vs-predict.png">
+</p>
+
  
 --- 
 
