@@ -20,7 +20,8 @@ As the number of infected cases and deaths keep rising, a statistical perspectiv
 
 It's way too early to predict the peak level and its timing, but things don't look as bleak as before.
 
-\newline
+
+
 
 
 ### Data Sources
