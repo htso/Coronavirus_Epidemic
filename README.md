@@ -32,6 +32,8 @@ http://www.nhc.gov.cn/xcs/yqtb/list_gzbd.shtml
 
 I use the summary table from [Wiki](https://en.wikipedia.org/wiki/Timeline_of_the_2019%E2%80%9320_Wuhan_coronavirus_outbreak). A nice visualization can be found [here](https://gisanddata.maps.arcgis.com/apps/opsdashboard/index.html#/bda7594740fd40299423467b48e9ecf6). I capture the Wiki table and save it in `corona_data.csv`, which could be read into R. 
 
+卫健委 usually updates its website at around US time 16:00 PST. 
+
 ---
 
 ### Model
@@ -66,11 +68,11 @@ The rest is to fit this exponential function to the daily data. I use non-linear
 ---
 
 ### Results
-This is the latest model prediction on the number of confirmed cases. The actual figures are usually released at around 16:00 PST. 
+Fig. 2 is the latest model prediction on the number of confirmed cases. The actual figures are usually released at around 16:00 PST. 
 
 ![predict1](latest-prediction.png)
 
-Beta, or the rate of infection is dropping, as could be seen in the left plot below.
+Beta, or the rate of infection is dropping, as could be seen in Fig. 3.
 
 ![beta](plots/Beta-history.png)
 

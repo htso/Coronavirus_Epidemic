@@ -74,7 +74,7 @@ full_path = paste(plot_path, fnm, sep="")
 png(full_path)
 plot(df[,"t"], df[,"confirmed"], type="b", 
      xlab="Date", ylab="No of confirmed cases",
-     main="Coronvirus Confirmed Cases and Predictions")
+     main="Fig. 2 Coronvirus Confirmed Cases and Predictions")
 abline(v=last.t, col="grey", lwd=2)
 grid(NA, 10, lwd = 2)
 text(x=last.t, y=100, labels=latest.date, pos=3, col="blue", cex=1)
@@ -82,6 +82,8 @@ txt = c(paste(as.character(forecast.df[1,"date"]), round(forecast.df[1,"confirme
         paste(as.character(forecast.df[2,"date"]), round(forecast.df[2,"confirmed"],0), sep=" : "))
 hgt = max(df[,"confirmed"])
 text(x=1, y=c(hgt*0.9, hgt*0.8), labels=txt, pos=4, col="red", cex=2)
+text(x=last.t+0.2, y=15000, labels="Forecast", pos=4, col="red4", cex=1)
+text(x=last.t-1, y=15000, labels="Actual", pos=2, col="red4", cex=1)
 dev.off()
 
 file.copy(from=full_path, to=home)
@@ -89,21 +91,21 @@ file.rename(from=file.path(home, fnm), to=file.path(home, "latest-prediction.png
 
 fnm = paste("Beta-history.png",  sep="")
 full_path = paste(plot_path, fnm, sep="")
-png(full_path, width=1080, height=480)
-par(mfrow=c(1,3))
+png(full_path, width=680, height=480)
+par(mfrow=c(1,1))
 dte = as.Date(rownames(Daily_updates))
 plot(dte, Daily_updates[,"beta"], type="b", cex=5, bg="red", col="black", lwd=3, pch=21,
      xlab="Date", ylab="beta",
-     main="Rate of Infection (Beta)")
+     main="Fig. 3 Rate of Infection (Beta)")
 grid(NA, 10, lwd = 1)
-plot(dte, Daily_updates[,"alpha"], type="b",  cex=5, bg="blue", col="black", lwd=3, pch=22,
-     xlab="Date", ylab="alpha",
-     main="Alpha")
-grid(NA, 10, lwd = 1)
-plot(dte, Daily_updates[,"intcpt"], type="b",  cex=5, bg="green", col="black", lwd=3, pch=25,
-     xlab="Date", ylab="Intercept",
-     main="Intercept")
-grid(NA, 10, lwd = 1)
+# plot(dte, Daily_updates[,"alpha"], type="b",  cex=5, bg="blue", col="black", lwd=3, pch=22,
+#      xlab="Date", ylab="alpha",
+#      main="Alpha")
+# grid(NA, 10, lwd = 1)
+# plot(dte, Daily_updates[,"intcpt"], type="b",  cex=5, bg="green", col="black", lwd=3, pch=25,
+#      xlab="Date", ylab="Intercept",
+#      main="Intercept")
+# grid(NA, 10, lwd = 1)
 dev.off()
 
 
