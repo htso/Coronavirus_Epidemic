@@ -20,6 +20,9 @@ As the number of infected cases and deaths keep rising, a statistical perspectiv
 
 It's way too early to predict the peak level and its timing, but things don't look as bleak as before.
 
+\newline
+
+
 ### Data Sources
 The official source of data is from 中华人民共和国国家卫生健康委员会 (National Health Commission of the PRC) or 卫健委.
 
