@@ -1,7 +1,5 @@
 
 
-library(ggplot2)
-
 today = Sys.Date()
 today.ch = as.character(today)
 
