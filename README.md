@@ -66,6 +66,10 @@ By elementary calculus Equ (4) has solution
 
 The rest is to fit this exponential function to the daily data. I use non-linear least squares in `R`. For coding details please consult `coronavirus.R`.
 
+### Update (2/2)
+Since the exponential model seems to overestimate the actual number of cases, an alternative is to fit a simple time trend linear model. See `coronavirus.R` for details. 
+
+
 ---
 
 ### Results
@@ -76,6 +80,11 @@ Fig. 2 is the latest model prediction on the number of confirmed cases. The actu
 Beta, or the rate of infection is dropping, as could be seen in Fig. 3.
 
 ![beta](plots/Beta-history.png)
+
+Fig. 4 is the prediction of the linear trend model. Notice the next-day infected cases is substantially lower.
+
+![predict1](linear-prediction.png)
+
 
 ---
 

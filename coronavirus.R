@@ -53,6 +53,7 @@ rownames(Daily_updates)[nrow(Daily_updates)] = latest.date
 
 
 # ==== Prediction =================================
+if ( !exists("Forecast") ) Forecast = list()
 last.t = tail(dat[,"t"],1)
 forecast.df = data.frame(matrix(NA, nrow=3, ncol=ncol(dat)))
 colnames(forecast.df) = colnames(dat)
@@ -66,9 +67,48 @@ pred = predict(model, newdata=forecast.df, se.fit = TRUE, level=0.95)
 pred
 
 forecast.df[,"confirmed"] = pred
-df = rbind(dat, forecast.df)
+Forecast[[length(Forecast)+1]] = forecast.df
+
+# ==== linear model ===================================
+dat2 = dat[12:18,]
+model2 = glm(confirmed ~ t, family=gaussian, data=dat2)
+summary(model2)
+
+forecast2.df = data.frame(matrix(NA, nrow=3, ncol=ncol(dat2)))
+colnames(forecast2.df) = colnames(dat2)
+forecast2.df[1:3,"date"] = dte
+forecast2.df[,"date"] = as.Date(forecast2.df[,"date"], origin="1970-01-01")
+forecast2.df[,"t"] = last.t + 1:3
+pred2 = predict(model2, newdata=forecast2.df)
+forecast2.df[,"confirmed"] = pred2
+
+if ( !exists("Forecast2") ) Forecast2 = list()
+Forecast2[[length(Forecast2)+1]] = forecast2.df
+
+df2 = rbind(dat2, forecast2.df)
+fnm = paste("daily-linear-prediction-", latest.date, ".png",  sep="")
+full_path = paste(plot_path, fnm, sep="")
+png(full_path)
+plot(df2[,"t"], df2[,"confirmed"], type="b", 
+     xlab="Date", ylab="No of confirmed cases",
+     main="Fig. 4 Coronvirus Confirmed Cases and Predictions (linear model)")
+abline(v=last.t, col="grey", lwd=2)
+grid(NA, 10, lwd = 2)
+text(x=last.t, y=100, labels=latest.date, pos=3, col="blue", cex=1)
+txt = c(paste(as.character(forecast2.df[1,"date"]), round(forecast2.df[1,"confirmed"],0), sep=" : "), 
+        paste(as.character(forecast2.df[2,"date"]), round(forecast2.df[2,"confirmed"],0), sep=" : "))
+hgt = max(df2[,"confirmed"])
+text(x=min(df2[,"t"]), y=c(hgt*0.9, hgt*0.8), labels=txt, pos=4, col="red", cex=2)
+text(x=last.t+0.2, y=15000, labels="Forecast", pos=4, col="red4", cex=1)
+text(x=last.t-1, y=15000, labels="Actual", pos=2, col="red4", cex=1)
+dev.off()
+
+
+
+
 
 # ==== Plots ==========================================
+df = rbind(dat, forecast.df)
 fnm = paste("daily-prediction-", latest.date, ".png",  sep="")
 full_path = paste(plot_path, fnm, sep="")
 png(full_path)
