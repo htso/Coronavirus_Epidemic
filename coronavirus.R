@@ -6,7 +6,7 @@ today = Sys.Date()
 today.ch = as.character(today)
 
 if ( file.exists("CoronaV.RData") ) load("CoronaV.RData")
-rm(data_path, plot_path, csv_file, dat, model, forecast.df, last.t, latest.date)
+rm(data_path, plot_path, csv_file, dat, model, last.t, latest.date)
 
 home = getwd()
 cat("home : ", home)
@@ -70,7 +70,7 @@ forecast.df[,"confirmed"] = pred
 Forecast[[length(Forecast)+1]] = forecast.df
 
 # ==== linear model ===================================
-dat2 = dat[12:18,]
+dat2 = dat[12:nrow(dat),]
 model2 = glm(confirmed ~ t, family=gaussian, data=dat2)
 summary(model2)
 

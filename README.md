@@ -18,6 +18,7 @@ It's way too early to predict the peak level and its timing, but things don't lo
 | 2020-01-31 |	11,791 |	13,415 |	-1,624 |	-13.77 |
 | 2020-02-01 |	14,380 |	15,888 |	-1,508 |	-10.49 |
 | 2020-02-02 |	17,205 |	18,837 |	-1,632 |	-9.49 |
+| 2020-02-03 |	20,438 |	22,112 |	-1,674 |	-8.19 |
 
 <p align="center"> 
 <img src="actual-vs-predict.png">

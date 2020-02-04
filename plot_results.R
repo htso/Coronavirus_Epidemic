@@ -22,7 +22,7 @@ full_path = paste(home, fnm, sep="")
 png(full_path, width=680, height=480)
 par(mar = c(5,5,5,5))
 with(dat1, plot(date, delta, type="b", col="black", pch=16, cex=2, xaxt="n",
-                xlab="Date", ylab="Delta", ylim=c(-1700,0)))
+                xlab="Date", ylab="Delta", ylim=c(-1800,0)))
 title(main="Fig. 1 Actual Infected Cases minus Model Prediction")
 mtext(text="negative ==> actual less than prediction", side=3, line=1)
 axis(1, dat1$date, format(dat1$date, "%b %d"), cex.axis=1 )
