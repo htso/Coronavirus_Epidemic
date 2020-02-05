@@ -1,4 +1,7 @@
 # Wuhan Coronavirus Epidemic
+
+![predict1](latest-prediction.png)
+
 As the number of infected cases and deaths keep rising, a statistical perspective on the spread of the coronavirus epidemic is needed. This repo presents the modeling tool to make daily prediction. My goal is to make a daily update of the model as new data become available. Epidemiological studies on the 2003 SARS epidemic can be found in [1], [2], and [3]. A discussion of the standard models can be found in [4].
 
 #### Update (2/1/2020) 
@@ -74,11 +77,7 @@ Since the exponential model seems to overestimate the actual number of cases, an
 ---
 
 ### Results
-Fig. 2 is the latest model prediction on the number of confirmed cases. The actual figures are usually released at around 16:00 PST. 
-
-![predict1](latest-prediction.png)
-
-Beta, or the rate of infection is dropping, as could be seen in Fig. 3.
+Beta, the rate of infection is dropping, as could be seen in Fig. 3.
 
 ![beta](plots/Beta-history.png)
 
