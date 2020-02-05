@@ -91,7 +91,7 @@ full_path = paste(plot_path, fnm, sep="")
 png(full_path)
 plot(df2[,"t"], df2[,"confirmed"], type="b", 
      xlab="Date", ylab="No of confirmed cases",
-     main="Fig. 4 Coronvirus Confirmed Cases and Predictions (linear model)")
+     main="Fig. 4 Actual and Predictions (linear model)")
 abline(v=last.t, col="grey", lwd=2)
 grid(NA, 10, lwd = 2)
 text(x=last.t, y=100, labels=latest.date, pos=3, col="blue", cex=1)
@@ -114,7 +114,7 @@ full_path = paste(plot_path, fnm, sep="")
 png(full_path)
 plot(df[,"t"], df[,"confirmed"], type="b", 
      xlab="Date", ylab="No of confirmed cases",
-     main="Fig. 2 Coronvirus Confirmed Cases and Predictions")
+     main="Fig. 2 Actual and Predictions")
 abline(v=last.t, col="grey", lwd=2)
 grid(NA, 10, lwd = 2)
 text(x=last.t, y=100, labels=latest.date, pos=3, col="blue", cex=1)
