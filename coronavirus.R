@@ -17,7 +17,7 @@ csv_file = "corona_data.csv"
 full_path = paste(data_path, csv_file, sep="")
 cat("csv full path : ", full_path)
 
-# override dat with the latest data
+# override dat with the latest data     
 dat = read.csv(full_path, header=TRUE, stringsAsFactors=FALSE)
 dat = dat[9:nrow(dat),]
 dat[,"t"] = 1:nrow(dat)
