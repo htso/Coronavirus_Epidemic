@@ -7,10 +7,6 @@
 #### Update (2/6/2020) 
 Confirmed cases rising much slower than the exponential model predicted. 
 
-
-#### Update (2/5/2020) 
-We see a big _slowdown_ in confirmed cases today. Positive.
-
 | Date       | Actual | Predict | Delta | % |
 | -----------|--------|---------|-------|----------|
 | 2020-01-28 | 5,974 |	6,809 |	-835 |	-13.98 |
@@ -24,6 +20,9 @@ We see a big _slowdown_ in confirmed cases today. Positive.
 | 2020-02-05 |	28,018 |	30,196 |	-2,178 |	-7.77 |
 | 2020-02-06 |	31,161 |	34,645 |	-3,484 |   -11.18 |
 
+
+#### Update (2/5/2020) 
+We see a big _slowdown_ in confirmed cases today. Positive.
 
 #### Update (2/1/2020) 
 **_Observation_** : Actual has been consistently lower than model prediction. See table below and Fig. 1.  
