@@ -4,6 +4,10 @@
 <img src="actual-vs-predict.png">
 </p>
 
+#### Update (2/6/2020) 
+Confirmed cases rising much slower than the exponential model predicted. 
+
+
 #### Update (2/5/2020) 
 We see a big _slowdown_ in confirmed cases today. Positive.
 
@@ -18,6 +22,7 @@ We see a big _slowdown_ in confirmed cases today. Positive.
 | 2020-02-03 |	20,438 |	22,112 |	-1,674 |	-8.19 |
 | 2020-02-04 |	24,324 |	25,815 |	-1,491 |	-6.13 |
 | 2020-02-05 |	28,018 |	30,196 |	-2,178 |	-7.77 |
+| 2020-02-06 |	31,161 |	34,645 |	-3,484 |   -11.18 |
 
 
 #### Update (2/1/2020) 
