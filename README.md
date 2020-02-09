@@ -1,17 +1,12 @@
 # Wuhan Coronavirus Epidemic
 
-<p align="center"> 
-<img src="actual-vs-predict.png">
-</p>
-
-#### Update (2/6/2020) 
-Confirmed cases rising much slower than the exponential model predicted. 
+![predict1](linear-prediction.png)
 
 | Date       | Actual | Predict | Delta | % |
 | -----------|--------|---------|-------|----------|
-| 2020-01-28 | 5,974 |	6,809 |	-835 |	-13.98 |
-| 2020-01-29 |	7,711 |	8,884 |	-1,173 |	-15.21 |
-| 2020-01-30 |	9,692 |	11,041 |	-1,349 |	-13.92 |
+| 2020-01-28 | 5,974 |  	6,809 |	-835 |	-13.98 |
+| 2020-01-29 |	7,711 |  	8,884 |	-1,173 |	-15.21 |
+| 2020-01-30 |	9,692 |	   11,041 |	-1,349 |	-13.92 |
 | 2020-01-31 |	11,791 |	13,415 |	-1,624 |	-13.77 |
 | 2020-02-01 |	14,380 |	15,888 |	-1,508 |	-10.49 |
 | 2020-02-02 |	17,205 |	18,837 |	-1,632 |	-9.49 |
@@ -19,7 +14,13 @@ Confirmed cases rising much slower than the exponential model predicted.
 | 2020-02-04 |	24,324 |	25,815 |	-1,491 |	-6.13 |
 | 2020-02-05 |	28,018 |	30,196 |	-2,178 |	-7.77 |
 | 2020-02-06 |	31,161 |	34,645 |	-3,484 |   -11.18 |
+| 2020-02-07* |	31,774 |	32,191 |	-417   |    -1.31 |
+| 2020-02-08* |	33,738 |	34,762 |	-1,024 |    -3.04 |
 
+\*Prediction switched to linear model.
+
+#### Update (2/6/2020) 
+Confirmed cases rising much slower than the exponential model predicted. 
 
 #### Update (2/5/2020) 
 We see a big _slowdown_ in confirmed cases today. Positive.
@@ -33,8 +34,11 @@ We see a big _slowdown_ in confirmed cases today. Positive.
 
 It's way too early to predict the peak level and its timing, but things don't look as bleak as before.
 
+<p align="center"> 
+<img src="actual-vs-predict.png">
+</p>
 
-![predict1](latest-prediction.png)
+
 
 ### Introduction
 As the number of infected cases and deaths keep rising, a statistical perspective on the spread of the coronavirus epidemic is needed. This repo presents the modeling tool to make daily prediction. My goal is to make a daily update of the model as new data become available. Epidemiological studies on the 2003 SARS epidemic can be found in [1], [2], and [3]. A discussion of the standard models can be found in [4].
