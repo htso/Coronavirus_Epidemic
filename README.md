@@ -1,8 +1,8 @@
 # Wuhan Coronavirus Epidemic
 
-![predict1](linear-prediction.png)
+![predict1](latest-prediction.png)
 
-| Date       | Actual | Predict | Delta | % |
+| Date       | Actual | Predict | Delta |   %   |
 | -----------|--------|---------|-------|----------|
 | 2020-01-28 | 5,974 |  	6,809 |	-835 |	-13.98 |
 | 2020-01-29 |	7,711 |  	8,884 |	-1,173 |	-15.21 |
@@ -14,10 +14,9 @@
 | 2020-02-04 |	24,324 |	25,815 |	-1,491 |	-6.13 |
 | 2020-02-05 |	28,018 |	30,196 |	-2,178 |	-7.77 |
 | 2020-02-06 |	31,161 |	34,645 |	-3,484 |   -11.18 |
-| 2020-02-07* |	31,774 |	32,191 |	-417   |    -1.31 |
-| 2020-02-08* |	33,738 |	34,762 |	-1,024 |    -3.04 |
+| 2020-02-07 |	34,546 |	38,619 |	-4,073 |   -11.79 |
+| 2020-02-08 |	37,198 |	42,490 |	-5,292 |   -14.23 |
 
-\*Prediction switched to linear model.
 
 #### Update (2/6/2020) 
 Confirmed cases rising much slower than the exponential model predicted. 
