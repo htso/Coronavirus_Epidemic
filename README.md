@@ -34,9 +34,6 @@ We see a big _slowdown_ in confirmed cases today. Positive.
 
 It's way too early to predict the peak level and its timing, but things don't look as bleak as before.
 
-<p align="center"> 
-<img src="actual-vs-predict.png">
-</p>
 
 
 
@@ -100,6 +97,10 @@ Beta, the rate of infection is dropping, as could be seen in Fig. 3.
 Fig. 4 is the prediction of the linear trend model. Notice the next-day infected cases is substantially lower.
 
 ![predict1](linear-prediction.png)
+
+<p align="center"> 
+<img src="actual-vs-predict.png">
+</p>
 
 
 ---
