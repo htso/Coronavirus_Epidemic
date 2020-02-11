@@ -4,19 +4,11 @@
 
 | Date       | Actual | Predict | Delta |   %   |
 | -----------|--------|---------|-------|----------|
-| 2020-01-28 | 5,974 |  	6,809 |	-835 |	-13.98 |
-| 2020-01-29 |	7,711 |  	8,884 |	-1,173 |	-15.21 |
-| 2020-01-30 |	9,692 |	   11,041 |	-1,349 |	-13.92 |
-| 2020-01-31 |	11,791 |	13,415 |	-1,624 |	-13.77 |
-| 2020-02-01 |	14,380 |	15,888 |	-1,508 |	-10.49 |
-| 2020-02-02 |	17,205 |	18,837 |	-1,632 |	-9.49 |
-| 2020-02-03 |	20,438 |	22,112 |	-1,674 |	-8.19 |
-| 2020-02-04 |	24,324 |	25,815 |	-1,491 |	-6.13 |
-| 2020-02-05 |	28,018 |	30,196 |	-2,178 |	-7.77 |
 | 2020-02-06 |	31,161 |	34,645 |	-3,484 |   -11.18 |
 | 2020-02-07 |	34,546 |	38,619 |	-4,073 |   -11.79 |
 | 2020-02-08 |	37,198 |	42,490 |	-5,292 |   -14.23 |
 | 2020-02-09 |	40,171 |	45,802 |	-5,631 |   -14.02 |
+| 2020-02-10 |	42,638 |	49,004 |	-6,366 |   -14.93 |
 
 
 #### Update (2/6/2020) 
@@ -90,17 +82,16 @@ Since the exponential model seems to overestimate the actual number of cases, an
 ---
 
 ### Results
-Beta, the rate of infection is dropping, as could be seen in Fig. 3.
-
-![beta](plots/Beta-history.png)
-
-Fig. 4 is the prediction of the linear trend model. Notice the next-day infected cases is substantially lower.
-
-![predict1](linear-prediction.png)
+Fig. 2 shows the prediction errors of the exponential model over time. The prediction errors have been consistently negative. That means the rate of spread has been slower than the best estimate fitted with all the data. 
 
 <p align="center"> 
 <img src="actual-vs-predict.png">
 </p>
+
+Beta, the rate of infection is dropping, as could be seen in Fig. 3.
+
+![beta](plots/beta_history.png)
+
 
 
 ---
@@ -133,6 +124,8 @@ Code has been tested on
 * Ubuntu 18.04 
 
 
+### Change log
+2/11/2020 : R script major rework. Combined exponential and linear model into one plot (latest-prediction.png). Plot functions moved to `plot_fun.R` which lives in utils\.
 
 
 ### Contact
