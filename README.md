@@ -125,7 +125,7 @@ Code has been tested on
 
 
 ### Change log
-2/11/2020 : R script major rework. Combined exponential and linear model into one plot (latest-prediction.png). Plot functions moved to `plot_fun.R` which lives in utils\.
+2/11/2020 : R script major rework. Combined exponential and linear model into one plot (`latest-prediction.png`). Plot functions moved to `plot_fun.R` which lives in `utils\\`.
 
 
 ### Contact
