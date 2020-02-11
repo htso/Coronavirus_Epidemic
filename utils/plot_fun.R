@@ -17,42 +17,42 @@ predict_vs_actual_plot = function(df, cur_t, title, fnm) {
   ymax = max(fmax1, fmax2, amax)
   ymax = ceiling(ymax/1000)*1000
   
-  png(fnm, width=680, height=480)
+  png(fnm, width=1080, height=680)
   # actual
-  plot(df[,"t"], df[,"confirmed"], type="p", pch=1, cex=1, bg="black",
+  plot(df[,"t"], df[,"confirmed"], type="p", pch=1, cex=3, bg="black",
        xaxt="n", ylim=c(0,ymax),
        xlab="Date", ylab="# confirmed cases",
        main=title)
   # only print every 4th date
   ix = seq(from=df[1,"t"], to=df[n, "t"], by=4)
-  axis(1, at=df$t[ix], format(df$date[ix], "%b %d"), cex.axis = .8, tick=TRUE)
+  axis(1, at=df$t[ix], format(df$date[ix], "%b %d"), cex.axis=2, tick=TRUE)
   # exp model fit line
   lines(df[(n-15):n,"t"], df[(n-15):n,"exp_pred"], col="red", lwd=2.5, lty=2)
   # linear model fit linear
   lines(df[(n-15):n,"t"], df[(n-15):n,"lin_pred"], col="blue", lwd=2.5, lty=5)
   # exp model prediction 
-  points(df[(cur_t+1):(cur_t+2),"t"], df[(cur_t+1):(cur_t+2),"exp_pred"], cex=2, pch=19, col="red")
+  points(df[(cur_t+1):(cur_t+2),"t"], df[(cur_t+1):(cur_t+2),"exp_pred"], cex=3, pch=19, col="red")
   # linear model prediction 
-  points(df[(cur_t+1):(cur_t+2),"t"], df[(cur_t+1):(cur_t+2),"lin_pred"], cex=2, pch=19, col="blue")
+  points(df[(cur_t+1):(cur_t+2),"t"], df[(cur_t+1):(cur_t+2),"lin_pred"], cex=3, pch=19, col="blue")
   # divider line
   abline(v=cur_t, col="grey", lwd=2)
   grid(nx=NA, ny=NULL, lwd = 2)
   # today's date
-  text(x=cur_t, y=100, labels=cur_date, pos=3, col="blue", cex=0.8)
+  text(x=cur_t, y=100, labels=cur_date, pos=3, col="blue", cex=2.5)
   # format the numbers
   txt1 = paste(as.character(df[cur_t+1, "date"]), ":") 
-  txt2 = paste(format(round(df[cur_t+1, "exp_pred"],0), big.mark=","), "(exp)")
-  txt3 = paste(format(round(df[cur_t+1, "lin_pred"],0), big.mark=","), "(linear)")
+  txt2 = paste(format(round(df[cur_t+1, "exp_pred"],0), big.mark=","), "(exponential model)")
+  txt3 = paste(format(round(df[cur_t+1, "lin_pred"],0), big.mark=","), "(linear model)")
   # prediction text
-  text(x=min(df[,"t"]), y=ymax*0.76, labels=txt1, pos=4, col="red", cex=1.3)
-  text(x=min(df[,"t"])+1, y=ymax*0.7, labels=txt2, pos=4, col="red", cex=1.3)
-  text(x=min(df[,"t"])+1, y=ymax*0.64, labels=txt3, pos=4, col="red", cex=1.3)
+  text(x=min(df[,"t"]), y=ymax*0.77, labels=txt1, pos=4, col="red", cex=2.2)
+  text(x=min(df[,"t"])+0.7, y=ymax*0.70, labels=txt2, pos=4, col="red", cex=2.2)
+  text(x=min(df[,"t"])+0.7, y=ymax*0.63, labels=txt3, pos=4, col="red", cex=2.2)
   # mark the two sides
-  text(x=cur_t, y=ymax*0.2, labels="Forecast", pos=4, col="red4", cex=1)
-  text(x=cur_t-0.5, y=ymax*0.2, labels="Actual", pos=2, col="red4", cex=1)
+  text(x=cur_t, y=ymax*0.2, labels="Forecast", pos=4, col="red4", cex=2)
+  text(x=cur_t-0.2, y=ymax*0.2, labels="Actual", pos=2, col="red4", cex=2)
   # put legend in the upper left hand corner
   legend("topleft",
-         legend=c("exp fit", "linear fit", "actual"),
+         legend=c("exponential fit", "linear fit", "actual"),
          lty=c(2,5,0), pch=c(19, 19, 1), col=c("red", "blue", "black"))
   
   dev.off()
