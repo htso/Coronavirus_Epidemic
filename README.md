@@ -2,6 +2,8 @@
 
 ![predict1](latest-prediction.png)
 
+![peaking](things-have-peaked.png)
+
 | Date       | Actual | Predict | Delta |   %   |
 | -----------|--------|---------|-------|----------|
 | 2020-02-06 |	31,161 |	34,645 |	-3,484 |   -11.18 |

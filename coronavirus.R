@@ -113,5 +113,47 @@ beta_plot(Daily_updates, title, full_path)
 save.image("CoronaV.RData")
 
 
+png("things-have-peaked.png", width=1080, height=680)
+par(mfrow=c(2,3))
+with(dat, plot(date, new.cases, type="b", xlab="", ylab="",
+               col="red", cex=2,
+               cex.main=2, cex.lab=2, cex.axis=1.5,
+               main="# Newly Confirmed Cases"))
+grid(nx=NA, ny=NULL)
+text(x=as.integer(dat[1,"date"])+2, y=2500, 
+     labels="peaked a week ago", 
+     cex=3, col="grey", pos=4)
+
+with(dat, plot(date, suspected, type="b", xlab="", ylab="",
+               col="blue", cex=2,
+               cex.main=2, cex.lab=2, cex.axis=1.5,
+               main="# Suspect Cases"))
+grid(nx=NA, ny=NULL)
+text(x=as.integer(dat[1,"date"])+2, y=20000, 
+     labels="peaked 3 days ago", 
+     cex=3, col="grey", pos=4)
+
+with(dat, plot(date, quarantined, type="b", xlab="", ylab="",
+               col="orange", cex=2,
+               cex.main=2, cex.lab=2, cex.axis=1.5,
+               main="# Quarantined"))
+grid(nx=NA, ny=NULL)
+text(x=as.integer(dat[1,"date"])+2, y=100000, 
+     labels="reached a plateau", 
+     cex=3, col="grey", pos=4)
+
+with(dat, plot(date, new.deaths, type="b", xlab="", ylab="",
+               cex.main=2, cex.lab=2, cex.axis=1.5,
+               main="# New Deaths"))
+grid(nx=NA, ny=NULL)
+with(dat, plot(date, new.recov, type="b", xlab="Date", ylab="# recovered",
+               cex.main=2, cex.lab=2, cex.axis=1.5,
+               main="# Recovered"))
+grid(nx=NA, ny=NULL)
+with(dat, plot(date, new.sev, type="b", xlab="", ylab="",
+               cex.main=2, cex.lab=2, cex.axis=1.5,
+               main="# Severe Cases"))
+grid(nx=NA, ny=NULL)
+dev.off()
 
 
