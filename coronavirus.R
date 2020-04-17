@@ -112,6 +112,21 @@ beta_plot(Daily_updates, title, full_path)
 # save everything 
 save.image("CoronaV.RData")
 
+# NOTE : 
+# To reproduce the plots on github, I discard everything after Feb 11. 
+# The reason is on 12th, NHC changed methodology of reporting confirmed cases, which caused a jump in
+# the plot. 
+
+dat0 = dat[1:27,]
+new.cases = c(NA, diff(dat0[,"confirmed"]))
+new.deaths = c(NA, diff(dat0[,"deaths"]))
+new.recov = c(NA, diff(dat0[,"recovered"]))
+new.sev = c(NA, diff(dat0[,"severe"]))
+
+dat = cbind(dat0, new.cases=new.cases, new.deaths=new.deaths, new.recov=new.recov, new.sev=new.sev)
+
+
+
 
 png("things-have-peaked.png", width=1080, height=680)
 par(mfrow=c(2,3))
